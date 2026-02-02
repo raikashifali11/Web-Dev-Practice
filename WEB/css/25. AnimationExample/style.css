@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #87ceeb;
+}
+.heading{
+    margin: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: blueviolet;
+    font-size: 22px;
+}
+.box {
+  width: 100%;
+  height: 350px;
+  margin-top: 40px;
+  position: relative;
+}
+.sun {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #fdb813;
+  box-shadow: 0px 0px 20px yellow;
+  position: absolute;
+  top: 20px;
+  left: -5%;
+  animation: sun 6s linear 0.5s;
+  z-index: 10;
+  opacity: 1;
+}
+.cloud1 {
+  height: 70px;
+  width: 160px;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  opacity: 0.9;
+  animation: cloud1 6s ease-in 0.5s;
+}
+.cloud2 {
+    height: 70px;
+    width: 160px;
+    position: absolute;
+    bottom: 140px;
+    left: 300px;
+    opacity: 0.7;
+    animation: cloud2 6s ease-in-out 0.5s;
+}
+.cloud3 {
+    height: 70px;
+    width: 160px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    opacity: 0.6;
+    animation: cloud3 6s ease-out 0.5s;
+}
+.cloud4 {
+    height: 70px;
+    width: 160px;
+    position: absolute;
+    bottom: 65px;
+    left: 70px;
+    opacity: 0.8;
+    animation: cloud4 6s linear 0.5s;
+}
+.cloud5 {
+    height: 70px;
+    width: 160px;
+    position: absolute;
+    bottom: 40px;
+    right: 200px;
+    opacity: 0.5;
+    animation: cloud5 6s ease-in 0.5s;
+
+}
+@keyframes sun {
+    from {
+        top: 20px;
+        left: -5%;
+      }
+      to {
+        top: 24px;
+        left: 110%;
+      }
+}
+@keyframes cloud1 {
+  from {
+    top: 60px;
+    left: 10px;
+  }
+  to {
+    top: 60px;
+    left: 110%;
+  }
+}
+@keyframes cloud2 {
+  from {
+    bottom: 140px;
+    left: 300px;
+  }
+  to {
+    bottom: 140px;
+    left: 110%;
+  }
+}
+@keyframes cloud3 {
+  from {
+    top: 0px;
+    right: 10px;
+  }
+  to {
+    top: 0px;
+    right: 110%;
+  }
+}
+@keyframes cloud4 {
+  from {
+    bottom: 65px;
+    left: 70px;
+  }
+  to {
+    bottom: 65px;
+    left: 110%;
+  }
+}
+@keyframes cloud5 {
+  from {
+    bottom: 40px;
+    right: 200px;
+  }
+  to {
+    bottom: 40px;
+    right: 110%;
+  }
+}

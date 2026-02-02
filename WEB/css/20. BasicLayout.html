@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: rgb(189, 179, 179);
+            text-align: center;
+            padding: 25px;
+        }
+        .navbar{
+            background-color: rgba(42, 40, 40, 0.941);
+            height: 50px;
+        }
+        aside{
+            width: 20%;
+            float: left;
+            padding: 10px;
+        }
+        section{
+            width: 40%;
+            float: left;
+            padding: 10px;
+
+        }
+        article{
+            width: 40%;
+            float: left;
+            padding: 10px;
+
+        }
+        Footer{
+            display: block;
+            clear: both;
+            background-color: rgb(189, 179, 179);
+            text-align: center;
+            padding: 20px;   
+        }
+        @media screen and (max-width: 600px) {
+            aside,article,section{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Header</h2>
+    </header> 
+
+    <nav class="navbar"></nav>
+    
+    <main>
+        <aside>
+            <h3>This is aside</h3>
+            <p>This is side content</p>
+            <ul>
+                <li>author information</li>
+                <li>fun facts</li>
+                <li>quotes</li>
+                <li>external links</li>
+                <li>comments</li>
+                <li>related content</li>
+            </ul>
+        </aside>
+        <section>
+            <h3>This is section</h3>
+            <p>This is dependent content</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci veritatis explicabo temporibus laborum iste nam id quis officiis sunt sit modi, dolore earum asperiores dicta cumque tempora quisquam accusantium quaerat!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, eaque eius facilis officia unde totam assumenda consectetur aspernatur odit. Laboriosam perspiciatis alias, illum unde expedita commodi blanditiis soluta inventore labore?</p>
+        </section>
+        <article>
+            <h3>This is article</h3>
+            <p>This is independent content</p>
+            <ul>
+                <li>News Article</li>
+                <li>Job Post</li>
+                <li>Blog Post</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias possimus sunt nostrum quos unde enim dignissimos animi cupiditate impedit.</p>
+        </article>
+    </main>
+
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>
