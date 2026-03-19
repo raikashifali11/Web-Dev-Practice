@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <h4>Cart Quantity:</h4>
+    <button onclick="
+      displayQuantity.innerText = `Cart quantity: ${cardQuantity}`;
+      ">Show Quantity</button>
+    <button onclick="
+      if (cardQuantity < 10) {
+        cardQuantity += 1;      
+      }else{
+        alert('The Cart is full');
+      }
+      displayQuantity.innerText = `Cart quantity: ${cardQuantity}`;
+      ">Add to Cart</button>
+    <button onclick="
+      if (cardQuantity > 0) {
+        cardQuantity -= 1;
+      }else{
+        alert('Not enough items in the cart')
+      }
+      displayQuantity.innerText = `Cart quantity: ${cardQuantity}`;
+      ">Remove from Cart</button>
+    <button onclick="
+    if (cardQuantity < 9) {
+        cardQuantity += 2;      
+      }else{
+        alert('The Cart is full');
+      }
+      displayQuantity.innerText = `Cart quantity: ${cardQuantity}`;
+    ">+2</button>
+    <button onclick="
+    if (cardQuantity < 8) {
+        cardQuantity += 3;      
+      }else{
+        alert('The Cart is full');
+      }
+      displayQuantity.innerText = `Cart quantity: ${cardQuantity}`;
+    ">+3</button>
+
+    <button onclick="
+    if (cardQuantity > 1) {
+        cardQuantity -= 2;
+      }else{
+        alert('Not enough items in the cart')
+      }
+      displayQuantity.innerText = `Cart quantity: ${cardQuantity}`;
+    ">-2</button>
+
+    <button onclick="
+    if (cardQuantity > 2) {
+        cardQuantity -= 3;
+      }else{
+        alert('Not enough items in the cart')
+      }
+      displayQuantity.innerText = `Cart quantity: ${cardQuantity}`;
+    ">-3</button>
+    <button onclick="
+    cardQuantity = 0;
+      console.log('Cart was reset.');
+      displayQuantity.innerText = `Card was reset.
+Cart quantity: ${cardQuantity}`;
+      ">Reset Cart</button>
+      <p class="display-cart-quantity"></p>
+
+    <script>
+      let cardQuantity = 0;
+      let displayQuantity = document.querySelector(".display-cart-quantity");
+    </script>
+  </body>
+</html>
