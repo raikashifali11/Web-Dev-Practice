@@ -1,0 +1,80 @@
+<!-- SIMPLE PROGRAM TO SHOW ARRAY METHODS -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+    <style>
+      button {
+        background-color: mediumseagreen;
+        color: white;
+        padding: 6px 14px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover{
+        background-color: rgb(34, 151, 87);
+      }
+      .fruits {
+        margin: 0px 0px 20px 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="color: mediumseagreen">Array Methods:</h2>
+    <h4 style="margin-bottom: 0px">Fruits:</h4>
+    <div class="fruits"></div>
+
+    <button id="push">Push</button>
+    <button id="pop">Pop</button>
+    <button id="shift">Shift</button>
+    <button id="unshift">Unshift</button>
+    <button id="reverse">Reverse</button>
+    <button id="splice">Splice</button>
+
+    <script>
+      let fruits = ["Banana", "Mango", "Peach", "Apple", "Melon"];
+      let div = document.querySelector(".fruits");
+      div.innerHTML = fruits.toString();
+
+      let push = document.querySelector("#push");
+      let pop = document.querySelector("#pop");
+      let shift = document.querySelector("#shift");
+      let unshift = document.querySelector("#unshift");
+      let reverse = document.querySelector("#reverse");
+      let splice = document.querySelector("#splice");
+
+      push.addEventListener("click", () => {
+        let value = prompt("Write the fruit name: ");
+        fruits.push(value);
+        div.innerHTML = fruits.toString();
+      });
+      pop.addEventListener("click", () => {
+        fruits.pop();
+        div.innerHTML = fruits.toString();
+      });
+      shift.addEventListener("click", () => {
+        fruits.shift();
+        div.innerHTML = fruits.toString();
+      });
+      unshift.addEventListener("click", () => {
+        let value = prompt("Write the fruit name: ");
+        fruits.unshift(value);
+        div.innerHTML = fruits.toString();
+      });
+      reverse.addEventListener("click", () => {
+        fruits.reverse();
+        div.innerHTML = fruits.toString();
+      });
+      splice.addEventListener("click", () => {
+        let index = prompt("Write the index from where you want to cut: ");
+        let count = prompt("How many element you want to cut: ");
+        let elements = prompt("Write name of elements you want to add: ");
+        fruits.splice(parseInt(index), parseInt(count), elements);
+        div.innerHTML = fruits.toString();
+      });
+    </script>
+  </body>
+</html>

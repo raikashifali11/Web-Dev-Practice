@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        #counter{
+            text-align: center;
+            font-size: 10rem;
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .buttonsBox{
+            text-align: center;
+        }
+        .buttons{
+            padding: 12px 24px;
+            color: white;
+            background-color: hsl(210, 100%, 69%);
+            font-size: 1.5rem;
+            border-radius: 5px;
+            margin: 1px;
+            cursor: pointer;
+        }
+        .buttons:hover{
+            background-color: hsl(210, 100%, 56%);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <div class="buttonsBox">
+        <button id="decreasebtn" class="buttons">decrease</button>
+        <button id="resetbtn" class="buttons">reset</button>
+        <button id="increasebtn" class="buttons">increase</button>
+    </div>
+
+    <script src="6. Counter.js"></script>
+</body>
+</html>
